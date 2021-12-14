@@ -1,0 +1,344 @@
+/* Cian */
+.home{
+		background-color: #EAE7DC;
+		overflow-x: hidden;
+}
+/* CL */
+.gallery{
+		background-color: #EAE7DC;
+		overflow-x: hidden;
+}
+
+/* Kian */
+.about{
+	background-color: #EAE7DC;
+}
+/* defines the background-color of our nav-bar buttons */
+.btn-default{
+	    background-color: #EAE7DC;
+}
+/* defines the background-color of our header and centers the text */
+#header{
+	background-color: #EAE7DC;
+	height: 100px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* adds our logo to the header and sets the size */
+#header img{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+/* defines the size, color, text and background image to be held in our footer */
+#footer{
+	padding-bottom: 5px;
+	padding-top: 45px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-family: 'IBM Plex Sans', sans-serif;
+	background-color: #00ccff;
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+	border-style: solid;
+	border-radius: thick;
+	background-image: url("../images/cool-background (2).jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* CL source for my .column, .container, #textimg and .closebtn code for this was - W3Schools(1999-2021)How To(CSS)[markup language].https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp */
+
+/* coded by CL/different pointer when highlighting an image */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* coded by CL/hover over an image it will highlight it */
+.column img:hover {
+  opacity: 1;
+}
+
+/* coded by CL/The expaneded image container positioning was needed to position the close button and the text inside the image */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* coded by CL/text inside the expaneded image, position at the top-left and color red */
+#textImg {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: red;
+  font-size: 25px;
+}
+
+/* coded by CL/Closable button beside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: red;
+  font-size: 35px;
+  cursor: pointer;
+}
+/* border for our card that houses our nav links */
+.card{
+	border-style: solid;
+	background-color: #1CEFFF;
+	
+}
+/* background-color for our card and centers our nav buttons */
+.card-body{
+	text-align: center;
+	background-color: #1CEFFF;
+
+
+}
+/* coded by CL/Centers the images in my Gallery */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Cian - Sets the background and border for the main paragraph */
+.text-home{
+	background-color:  #EAE7DC;
+	border: none;
+}
+
+/* Cian - Individual class name for the paragraphs */
+.homeP{
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: bold;
+}
+
+/* class for our catch phrase to change text color and font */
+.catchStyle{
+	position: relative;
+	text-align: center;
+	font-family: 'Smooch', cursive;
+	font-size: 30px;
+}
+
+/* class for our title to change the text color and font */
+.headStyle{
+	position: relative;
+	text-align: center;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+}
+/* Cian */
+.navBar{
+	text-align: center;
+	background-color: #EAE7DC;
+}
+
+/* Cian */
+.gametest{
+	background-image: url("background.jfif");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* Cian */
+.table{
+	border-style: solid;
+	border-radius: thick;
+	background-color: #EAE7DC;
+}
+
+
+/* Cian - changes the style of the headings of each of the tables. */
+h3{	
+	position: relative;
+	text-align: center;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	border-style: black;
+	border-radius: thick;
+
+}
+
+/* Cian - changes the font and text size of the table headings */
+th{
+	text-align: center;
+	font-family: 'smooch',cursive;
+	font-size: 25px;
+}
+
+/* Cian - changes the font and text size of the tables content */
+td{
+	text-align: center;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: bold;
+}
+
+
+/* Cian */
+.logoimg{
+	padding-top: 35px;
+	background-color: #EAE7DC;
+	text-align: center;
+
+}
+
+/* Cian */
+.backimage{
+	background-image: url("background1.jpg");
+	background-repeat: no repeat;
+	background-size: cover;
+}
+
+/* Cian Styling for the headings related to the main paragraphs */
+.welcome1{
+	text-align: center;
+	font-family: 'smooch',cursive;
+}
+/* Cian, style for my headings related to the game button */
+.welcome2{
+	text-align: center;
+	font-family: 'IBM Plex Sans' , sans-serif;
+	font-weight: bold;
+}
+
+/* The box my button is placed in for the gameCian */
+.gameplay{
+	text-align: center;
+}
+
+/* Changese the color of the heading text Cian*/
+.tableHome{
+	background-color: #EAE7DC;
+	border-style: black;
+	border-radius: thick;
+
+	
+}
+
+/* Kian */
+#header h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 30px;
+
+}
+/* Kian */
+#header h2 {
+	position: relative;
+	text-align: center;
+	font-family: 'Smooch', cursive;
+	font-size: 30px;
+}
+/* Kian for the description of each avatar */ 
+.card-text{
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: bold;
+}
+
+/* Kian black transparent behind pop up box to do with JS*/
+.donate{
+	width: 100%;
+	height: 165%;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+/* Kian white box containing the donation validation*/
+.content{
+	width: 500px;
+	height: 450px;
+	position: relative;
+	background-color: white;
+	border-radius: 6px;
+	text-align: center;
+	padding: 25px;
+	
+}
+/* Kian logo inside the white pop up box*/
+#logoup{
+
+	width:100px;
+	height: 100px;
+}
+/* Kian small x button in the corner of the pop up box*/
+.close{
+	position: absolute;
+	top: 0;
+	right: 14px;
+	font-size: 25px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+/* Cian style the buttons for my hide/show function*/
+button{
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 25px;
+	color: black;
+}
+
+/* Kian for the donate button font and styling */
+.button{
+	border-radius: 10px;
+	font-family: 'Smooch', cursive;
+	cursor: pointer;
+	font-size: 25px;
+	color: black;
+}
+/* Kian  */
+.body{ 
+	background-color: #00ccff; 
+	border-radius: 8px; 
+ }
+/* Kian font styling for job titles in the card */
+.job{
+	font-size: 25px;
+	font-family: 'Smooch', cursive;
+}
+
+/* changes the inner main box of the nav-bar Cian */
+
+.borderHome{
+	border-style: solid;
+	border-radius: thick;
+	background-color: #1CEFFF;
+}
+
+/* changes the color of the tables heading and background Cian */
+.text-center1{
+	background-color: #EAE7DC;
+	border-style: solid-black;
+	text-align: center;
+}
+
+/* changes the styling of the tables */
+.tableStyle{
+	border-style: solid;
+	border-radius: thick;
+	background-color:  #EAE7DC;
+}
+
+.card-bod{
+	background-color: #EAE7DC;
+	border-radius: thick;
+	border-style: solid;
+}
+
+.aboutBody{
+	overflow-x: hidden;
+}
