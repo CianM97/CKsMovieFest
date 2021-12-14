@@ -1,0 +1,178 @@
+<!-- Coded by Kian Brien -->
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<title> Ck's Movie Fest</title>
+		
+		<!-- Bootstrap and meta links -->
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link rel="stylesheet" href = "css/style.css">
+		
+		
+		<!-- Google fonts 'Smooch' & 'IBM Plex Sans' -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,100&family=Smooch&display=swap" rel="stylesheet">
+		
+	
+		<script>
+				
+				//this is my javascript for my donate button 
+				// window onload function so the javascript loads after the html
+				// Source for this code is from W3Schools (1999-2021) [HMTL] [Markup language] [Javascript] / Javascript - JS HTML DOM - DOM Event Listener /https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+				window.onload=function(){
+				// When you click the 'button' the donate CSS turns to flex meaning it will pop up
+				document.getElementById('button').addEventListener('click' , function(){
+					document.querySelector('.donate').style.display = 'flex';
+				});
+				// When you click the X in the top right corner it displays none going back to the original page
+				document.querySelector('.close').addEventListener('click', function(){
+					document.querySelector('.donate').style.display = 'none';
+				}); 
+				}
+				
+				//Validation for donate pop up, both name and email fields
+				function validate(){	
+					var formData=[];	//holds the data from the fields
+					//index name is 0
+					formData[0] = document.getElementById("nameData").value;
+					
+					//.value takes the data from the input fields
+					//assigning the email to index[1] meaning it needs to be more than 2 characters before returning validity
+					formData[1] = document.getElementById("emailData").value;
+					
+					//checks for a valid name and gives feedback again
+					if(formData[0].length < 2){
+						document.getElementById("feedback").innerHTML = "Invalid name";
+					}else 
+						document.getElementById("feedback").innerHTML = "&#10003";
+					
+					var symbol = formData[1].indexOf('@');
+					//the indexOf() checks for the position of the @ symbol so that there is a valid email inputted
+					
+					//feedback to the person if it is <1 then it is invalid otherwise a correct symbol will show
+					if(symbol < 1){
+						document.getElementById("emailFeedback").innerHTML = "Invalid E-mail";
+					}else
+						document.getElementById("emailFeedback").innerHTML = "&#10003;"
+					//if it is there then the correct symbol will show
+					
+					}
+			</script>
+	
+	
+	</head>
+	
+	<body class="about">
+	    <div id="header">
+			<img id="logo" src="images/PLogo.png" alt="logo">
+			<h1 id="title"> CK's Charity Movie Fest 2021 </h1>
+			<h2 id="slogan"> "Step back into the 80's"</h2>
+		</div>
+		<!--My nav links they include the links that return two the previous two pages-->
+		<div class="row g-0">
+			<div class="col-sm-12 borderHome">
+				<div class ="card">
+					<div class="card text-center">
+						<div class="card-body">
+						<a href="index.html" class="btn btn-default border border-dark"> Home </a>
+						<a href="gallery.html" class="btn btn-default border border-dark"> Gallery </a>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+	    
+		<!-- This is the body of my about page, it includes 3  proportionate images detailing the people behind the charity event-->
+		<!-- Source for this bootstrap card with images Getbootstrap.com(2011-2021) [HTML][Markup language] / Documentation - Components - Card / https://getbootstrap.com/docs/4.0/components/card/ -->
+		<div class="aboutBody">
+			<div class="row align-items-center">
+				<div class="col-md-4">
+					<div class="card text-center1">
+						<img src="images/CLavi.jpg" alt="Pierre" class="card-img-top" width="400" height="400">
+							<div class="card-bod">
+								<h5 class="card-title"> Pierre Walsh </h5>
+								<p class="card-text"> Founded in 1974 and boasting a massive intake of over $700 million since the beginning, Pierre Walsh the owner of Nokidhungry.org aims to make sure no child is hungry ever again. </p>
+								<p class="job"> Founder and Executive Chair </p>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-center1">
+						<img src="images/KLavi.jpg" alt="Michael" class="card-img-top" width="400" height="400">
+						<div class="card-bod">
+							<h5 class="card-title"> Michael Dunlop </h5>
+							<p class="card-text"> Venue to all of our wonderful events, Michael Dunlop has kindly given us free reign to scatter cinema screens all over his land so we can bring to you the best possible event. All in the name of child hunger.</p>
+							<p class="job"> Venue Owner </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-center1">
+						<img src="images/CMAvi.jpg" alt="Lisa" class="card-img-top" width="400" height="400">
+						<div class="card-bod">
+							<h5 class="card-title"> Lisa Healy </h5>
+							<p class="card-text"> The brains behind the event, countless amounts of hours all for our great cause. Every one of the exciting activities, thought of and organised by Lisa herself. Many thanks to her for her tireless efforts.</p>
+							<p class="job"> Event Co-ordinator </p> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- This is the end of content part of the body -->
+		
+		<!-- div containing the pop up box with donate options and form on the page and my example of Manipulating the DOM -->
+		<div class="donate">
+			<div class="content">
+				<!-- x button in the corner of the pop up styled to sit in the correct position -->
+				<div class="close">+</div>
+				<!-- Our logo also in the pop up box -->
+				<img id="logoup" src="images/PLogo.png" alt="js logo">
+				<br>
+				<br>
+				<!-- this is the form previously validated in JS above, action posts the form to the email below -->
+				<form method="post" action="mailto:x18400896@student.ncirl.ie">
+					<label> Enter your name: </label>
+					<input type ="text" placeholder="Full Name" id="nameData">
+					<p id ="feedback"> </p>
+				
+					<label> Enter your E-mail: </label>
+					<input type="text" placeholder="E-mail address" id="emailData">
+					<p id ="emailFeedback"></p>
+					
+					<label> How much would you like to donate? 2 tickets for $7 all proceeds go towards the foundation. </label>
+					<br>
+					
+					<!-- Source of the "required" attribute in pop up came from W3Schools(1999-2021)[HTML] [Markup language] HTML Tags list <input> required attribute https://www.w3schools.com/tags/att_select_required.asp -->
+					<select id="spending" required>
+					<option value=""> $0 </option>
+					<option value="Five Dollars"> $5 </option>
+					<option value="Ten Dollars"> $10 </option>
+					<option value="Twenty Five Dollars"> $25 </option>
+					</select>
+					<br>
+					<br>
+					<input type="submit" value = "Confirm Donation" onclick = "validate()">
+				</form>
+			</div>
+		</div>
+		
+		<!-- Footer for the bottom of the page containing my donate button and the actual end of the body-->
+		<footer id="footer">
+			<p>Thank you for coming we hope you enjoyed your visit back to the 80's!</p>
+			<br>
+			<a href="#" id="button" class="button"> Donate Now! </a>
+		
+		</footer>
+		
+		<!-- script tag to read bootstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	</body>
+
+</html>
