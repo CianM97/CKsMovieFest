@@ -1,0 +1,158 @@
+<!-- this page was coded by Conor Lynch -->
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+	        <!-- CL - title of my page -->
+			<title> Ck's Movie Fest</title>
+			
+			<!-- CL - Bootstrap Meta Links -->
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- SEO content for our search engeine optimisation -->
+			<meta name ="description" content =" Chairty Movie fest with all your favourite movies from the 80's, in aid of NoKidGoesHungry">
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+			<link rel="stylesheet" href = "css/style.css">
+			
+			<!-- CL - GoogleFont Links -->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+		    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,100&family=Smooch&display=swap" rel="stylesheet">
+			
+		<script>
+				 <!-- CL - My example of Minipulating the Dom, variable to enter a name into a desired field -->
+				 var fname;
+				 fname = prompt("enter name here");
+                 <!-- CL - function to greet visitor with "hi" then thier name displays, in this case as my h1 in my form and then in the next h2 as a heading also in my form, introduction to the gallery webpage of our website -->
+				 function sayHello(fname){
+				 document.getElementById("greeting").innerHTML = ("Hi "+fname);
+				 document.getElementById("myHeading").innerHTML = "And welcome to the Gallery Page of Ck's Charity Movie Fest 2021 , take a look at the movies that we will be showing through-out our festival. Movie timetables can be found on the Home page of this website, we have a varity of movies from action to comedy films,that will be available to view.We thank you for visiting our website and we hope you enjoy your step back into the 80's";
+	            }		 
+		</script>
+		
+		<script>
+				<!-- CL - My example of a clickable image with text, the variable's Imgexpand to expand the image and textImg to show some text inside the image once clicked on , source of the code for this was - W3Schools(1999-2021)How To(JavaScript)[markup language].https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp -->
+				function myFunction(imgs) {
+				var Imgexpand = document.getElementById("Imgexpand");
+				var textImg = document.getElementById("textImg");
+				<!-- uses the same src as the one in the expanded image to the one used for each image im my gallery -->
+				Imgexpand.src = imgs.src;
+				<!-- CL - using the alt atribute to apply text inside any given image on this webpage -->
+				textImg.innerHTML = imgs.alt;
+				<!-- CL - shows in the container element hidden with CSS -->
+				Imgexpand.parentElement.style.display = "block";
+		        }
+		</script>
+		
+	</head>
+	
+	<body class = "gallery">
+	    <div id = "header">
+		    <!--CL - Website Logo -->
+			<img id="logo" src="images/PLogo.png" alt="logo">
+		    <!-- CL - Header of webpage -->
+			<h1 class="headStyle"> Ck's Charity Movie Fest 2021 </h1>
+			<!-- CL - Catchline of webpage -->
+			<h2 class="catchStyle"> "Step back into the 80's" </h2>
+		</div>
+		    <!-- CL - My row that houses my nav buttons that are centered inside a card, the width of the screen-->
+			<div class="row g-0">
+				<div class="col-sm-12 borderHome">
+					<div class="card text-center">
+						<div class ="card">
+							<div class="card-body">
+								<!-- CL - My nav links-->
+								<a href="index.html" class="btn btn-default border border-dark"> Home </a>
+								<a href="about.html" class="btn btn-default border border-dark"> About </a>
+								
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+		    <!-- CL - form for my Dom example -->
+			<form>
+			<br>
+				<!-- CL - clickable button to display "myHeading" introduction message using the "sayHello(fname) function" -->
+				<input type="button" value="click me" style="display:block; margin: 0 auto;" onclick="sayHello(fname)">
+			</form>
+				<h1 id="greeting" class = "headStyle"></h1>
+				<h2 id="myHeading" class = "headStyle"></h2>
+			<!-- CL - Picture Gallery goes here with each image inside a div -->
+        <div class="row">
+           <div class="column">
+			    <img src="images/DieHard.jpg" width="400" height="400" alt="Die Hard movie Poster" class="center" onclick="myFunction(this);">
+             </div>
+	     </div>
+
+			<p class = "headStyle"> Die Hard is a 1988 American action film directed by John McTiernan and written by Jeb Stuart and Steven E. de Souza. It is based on the 1979 novel Nothing Lasts Forever by Roderick Thorp, and it stars Bruce Willis, Alan Rickman, Alexander Godunov, and Bonnie Bedelia. Die Hard follows New York City police detective John McClane (Willis) who is caught up in a terrorist takeover of a Los Angeles skyscraper while visiting his estranged wife. </p>
+  
+		<div class="row">
+			<div class="column">
+				<img src="images/IndianaJones-RaidersOfTheLostArk.jpg" width="400" height="400" alt="Indiana Jones movie Poster" class="center" onclick="myFunction(this);">
+			</div>
+		</div>
+  
+			<p class = "headStyle"> Raiders of the Lost Ark is a 1981 American action-adventure film directed by Steven Spielberg and written by Lawrence Kasdan, based on a story by George Lucas and Philip Kaufman. It stars Harrison Ford, Karen Allen, Paul Freeman, Ronald Lacey, John Rhys-Davies, and Denholm Elliott. Ford portrays Indiana Jones, a globe-trotting archaeologist fighting against Nazi German forces in 1936 to recover the long-lost Ark of the Covenant, a relic said to make an army invincible. Teaming up with his tough former lover Marion Ravenwood (Allen), Jones races to stop rival archaeologist Dr. René Belloq (Freeman) from guiding the Nazis to the Ark and its power. </p>
+
+        <div class="row">
+			<div class="column">
+				<img src="images/TheLandBeforeTime.jpg" width="400" height="400" alt="The Land Before Time movie poster" class="center" onclick="myFunction(this);">
+			</div>
+		</div>
+
+			<p class = "headStyle"> The Land Before Time is a 1988 animated adventure drama film directed and produced by Don Bluth and executive produced by Steven Spielberg, George Lucas, Kathleen Kennedy, and Frank Marshall. The film stars the voices of Gabriel Damon, Candace Hutson, Judith Barsi (posthumously) and Will Ryan with narration provided by Pat Hingle. It is the inaugural film in The Land Before Time franchise. </p>
+  
+        <div class="row">
+			<div class="column">
+				<img src="images/DirtyDancing.jpg" width="400" height="400" alt="Dirty Dancing movie poster" class="center" onclick="myFunction(this);">
+			</div>
+		</div>
+
+			<p class = "headStyle"> Dirty Dancing is a 1987 American romantic drama dance film written by Eleanor Bergstein, produced by Linda Gottlieb, and directed by Emile Ardolino. Starring Jennifer Grey and Patrick Swayze, it tells the story of Frances "Baby" Houseman (Grey), a young woman who falls in love with dance instructor Johnny Castle (Swayze) at a vacation resort. </p>
+
+       <div class="row">
+			<div class="column">
+				<img src="images/TheShining.jpg" width="400" height="400" alt="The Shining movie poster" class="center" onclick="myFunction(this);">
+			</div>
+       </div>
+
+			<p class = "headStyle"> The Shining is a 1980 psychological horror film produced and directed by Stanley Kubrick and co-written with novelist Diane Johnson. The film is based on Stephen King's 1977 novel of the same name and stars Jack Nicholson, Shelley Duvall, Scatman Crothers, and Danny Lloyd. </p> 
+
+       <div class="row">
+			<div class="column">
+				<img src="images/StirCrazy.jpg" width="400" height="400" alt="Stir Crazy movie poster" class="center" onclick="myFunction(this);">
+			</div>
+	   </div>
+
+			<p class = "headStyle"> Stir Crazy is a 1980 American comedy film directed by Sidney Poitier, produced by Hannah Weinstein and written by Bruce Jay Friedman. The film stars Gene Wilder and Richard Pryor as unemployed friends who are given 125-year prison sentences after being framed for a bank robbery. While in prison they befriend other prison inmates. The film reunited Wilder and Pryor, who had appeared previously in the 1976 comedy thriller film Silver Streak. The film was released in the United States on December 12, 1980 to mixed critical reviews and was a major financial success. </p>
+
+	    <!-- CL - source of the next 4 lines of code for this was - W3Schools(1999-2021)How To(HTML)[markup language].https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp -->
+		
+        <!-- CL - The container where the image will display -->
+        <div class="container">
+			<!-- CL - Button to close the image -->
+			<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+			<!-- CL - Image at 100% width after being clicked on, using the id="Imgexpand" -->
+			<img src="images" alt="images" id="Imgexpand" style="width:100%">
+
+			<!-- CL - Text at the top-left of the image displays, using the id="textImg" -->
+			<div id="textImg"></div>
+        </div>
+        <!-- CL - Picture Gallery ends here -->
+  
+        <!-- CL - Script using innerHTML to greet visitor after they have given thier name into the appropriate field -->
+	    <script>
+	    document.getElementById("greeting").innerHTML = ("Hi "+fname);
+	    </script>
+		<footer id="footer">
+		     <p>Thank you for coming we hope you enjoyed your visit back to the 80's</p>
+			 <br>
+	    </footer>
+		<!-- CL - Bootstrap JS Tag -->
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		
+    </body>
+	
+</html>
